@@ -67,7 +67,7 @@ const HookForm = (props) => {
         }
     };
 
-    //logic for confirm password check???
+    //logic for confirm password check
     const handleConfirmPassword = (e) => {
         setConfirmPassword(e.target.value);
         if(e.target.value.length < 7) {
@@ -92,7 +92,7 @@ const HookForm = (props) => {
                     {
                     userError ?
                     <p style={{color:'red'}}>{ userError }</p> :
-                    ''
+                    <p>&nbsp;</p>
                     }
                 </div>
                 <div className='form-group'>
@@ -101,7 +101,7 @@ const HookForm = (props) => {
                     {
                     emailerror ?
                     <p style={{color:'green'}}>{emailerror} </p> :
-                        ''
+                        <p>&nbsp;</p>
                     }
                 </div>
                 <div className='form-group'>
@@ -110,7 +110,7 @@ const HookForm = (props) => {
                     {
                     passwordError ?
                     <p style={{color:'red'}}>{ passwordError }</p> :
-                    ''
+                    <p>&nbsp;</p>
                     }
                 </div>
                 <div className='form-group'>
@@ -119,7 +119,7 @@ const HookForm = (props) => {
                     {
                     confirmPasswordError ?
                     <p style={{color:'red'}}>{ confirmPasswordError }</p> :
-                    ''
+                    <p>&nbsp;</p>
                     }
                 </div>
                 <input type="submit" value="Create User" className='btn btn-primary'/>
